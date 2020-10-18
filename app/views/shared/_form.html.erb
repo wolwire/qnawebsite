@@ -1,0 +1,11 @@
+<%= form_for(@question , html: {multipart: true}) do |f| %>
+  <div class="field">
+    <%= f.text_field :header, placeholder: "What is your question?" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Explain your question here!!" %>
+  </div>
+
+  <%= f.submit "Ask ", class: "btn btn-primary" %>
+<% end %>

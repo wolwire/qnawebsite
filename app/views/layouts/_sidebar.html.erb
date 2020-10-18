@@ -1,0 +1,10 @@
+<div class="sidenav">
+    <ul>
+      <a><%= link_to "Profile", current_user %></a>
+      <a><%= link_to "Edit Profile", edit_user_path(current_user) %></a>
+      <a><%= link_to "Ask Question", new_question_path%></a>
+      <a><%= link_to "Log out", logout_path, method: :delete %></a>
+      <a><%= link_to "Tags", tags_path%></a>
+
+    </ul>
+</div>

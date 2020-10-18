@@ -1,0 +1,6 @@
+---
+BUNDLE_FROZEN: '1'
+BUNDLE_PATH: /home/pi/qnawebsite/shared/bundle
+BUNDLE_WITHOUT: development:test
+BUNDLE_DISABLE_SHARED_GEMS: '1'
+BUNDLE_BIN: /home/pi/qnawebsite/releases/20201018182253/bin

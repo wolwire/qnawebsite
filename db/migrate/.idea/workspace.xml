@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ca6758f9-b8b9-476f-b96f-1ea129ded9d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../.idea/stackover_flow.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/stackover_flow.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/assets/stylesheets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/assets/stylesheets/custom.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/assets/stylesheets/layout/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/assets/stylesheets/layout/header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../app/views/layouts/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/../../app/views/layouts/_header.html.erb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Xr58eDiOul3DNT2dLpgJNlNjia" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ca6758f9-b8b9-476f-b96f-1ea129ded9d7" name="Default Changelist" comment="" />
+      <created>1581791214063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581791214063</updated>
+      <workItem from="1581791215713" duration="6000" />
+      <workItem from="1584102046100" duration="52000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

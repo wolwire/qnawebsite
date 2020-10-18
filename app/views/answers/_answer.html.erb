@@ -1,0 +1,43 @@
+<li >
+  <span class="content"><%= simple_format(answer.content) %></span>
+  <br>
+  <div align="right">
+    <span>
+      <%if logged_in? %>
+      <%if a=current_user.votes.find_by(votable:answer) %>
+    <%if a.vote==true %>
+  <%= link_to "Upvoted",upvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+          <span><%=answer.votes_rep %></span>
+          <%= link_to "Downvote",downvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+    <%elsif a.vote==false%>
+      <%= link_to "Upvote",upvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+          <span><%=answer.votes_rep %></span>
+          <%= link_to "Downvoted",downvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+      <%else %>
+      <%= link_to "Upvote",upvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+          <span><%=answer.votes_rep %></span>
+          <%= link_to "Downvote",downvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+    <%end %>
+    <%else %>
+    <%= link_to "Upvote",upvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+        <span><%=answer.votes_rep %></span>
+        <%= link_to "Downvote",downvote_path(votable_id:answer.id,votable_type:"Answer",user_id:current_user.id),method: :post %>
+      <%end %>
+        <%end %>
+        </span>
+
+
+    <span class="user"><%= link_to answer.user.name, answer.user %> </span>
+    <span class="timestamp">Posted <%= time_ago_in_words(answer.created_at) %> ago.</span>
+    <span>
+      <%= render "comments/comment_form",obj_id: answer.id,obj_type: "Answer"  %>
+    </span>
+    <span>
+  <% if current_user?(answer.user) %>
+    <%= link_to "delete", answer, method: :delete, data: { confirm: "You sure?" } %>
+  <% end %></span>
+    <h5>Comment<% answer.comments.count%></h5>
+    <%=render answer.comments %>
+  </div>
+  <hr>
+</li>

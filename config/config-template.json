@@ -1,0 +1,7 @@
+{
+  "RAILS_SECRET_KEY": "",
+  "DATABASE_PASSWORD": "",
+  "DATABASE_HOST": "",
+  "DATABASE_NAME": "",
+  "DATABASE_USERNAME": ""
+}

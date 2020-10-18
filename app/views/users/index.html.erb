@@ -1,0 +1,19 @@
+<% provide(:title, 'All Users') %>
+<div class="align-content-lg-center "><h1>All  Users</h1></div>
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <% @users.each do |user| %>
+        <div class="card">
+          <strong class="card-text"><%= link_to user.name,user,class: "btn btn-lg btn-primary" %></strong>
+          <p class="card-text">Rep:<%= user.reputation %></p>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <%= will_paginate %>
+      </div>
+    </div>
+  </div>
+</div>

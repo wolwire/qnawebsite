@@ -1,0 +1,56 @@
+<% provide(:title, 'Ques_Show') %>
+<div class="question_box">
+  <h1><%= @question.header %></h1>
+  <h3>Tags</h3>
+  <%@tags.each do |tag| %>
+    <span class="badge badge-secondary"><%= link_to tag.name, tag %></span>
+  <%end %>
+  </br>
+  <h2><%= simple_format(@question.content)%></h2>
+
+<% if logged_in? %>
+  <% if a=current_user.votes.find_by(votable:@question) %>
+    <% if a.vote.nil? %>
+    <%= link_to "Upvote",upvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id), method: :post, remote: true %>
+      <h3> <%= @question.votes_rep %> </h3>
+    <%= link_to "Downvote", downvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+    <% elsif a.vote %>
+      <%= link_to "Upvoted", upvote_path(votable_id:@question.id, votable_type:"Question", user_id:current_user.id), method: :post %>
+      <h3><%= @question.votes_rep %></h3>
+       <%= link_to "Downvote",downvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+      <%else %>
+      <%= link_to "Upvote", upvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+      <h3> <%= @question.votes_rep%> </h3>
+      <%= link_to "Downvoted",downvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+    <%end %>
+    <%else %>
+    <%= link_to "Upvote", upvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+    <h3> <%= @question.votes_rep %> </h3>
+    <%= link_to "Downvote", downvote_path(votable_id:@question.id,votable_type:"Question",user_id:current_user.id),method: :post %>
+  <%end %>
+    <%end %>
+
+
+  <span class="user"><%= link_to @question.user.name, @question.user %> </span><span class="timestamp">
+Posted <%= time_ago_in_words(@question.created_at) %> ago.
+  <% if current_user?(@question.user) %>
+<%= link_to "delete", @question , method: :delete, data: { confirm: "You sure?" } %></span>
+
+<% end %>
+</div>
+
+
+  <%if logged_in? %>
+    <%=render "answers/answer_form",  question: @question%>
+  <%end %>
+
+  <% if @answers.any? %>
+      <h3><a>Answers (<%= @answers.count %>)</a></h3>
+    <ul class="answers">
+          <%=render @answers%>
+    </ul>
+<%end %>
+
+
+
+

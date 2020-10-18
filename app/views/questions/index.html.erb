@@ -1,0 +1,10 @@
+<% provide(:title, 'All questions') %>
+<h1>All  Questions</h1>
+<%= will_paginate %>
+<ul class="questions">
+  <% @questions.each do |question| %>
+    <li><h4><%= link_to question.header, question %></h4>
+      <h5><%= question.content.truncate(100) %></h5></li>
+  <% end %>
+</ul>
+<%= will_paginate %>
