@@ -34,3 +34,4 @@ yarn-debug.log*
 .yarn-integrity
 /config/config.json
 /config/capistrano.local.yml
+.local_repo
