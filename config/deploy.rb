@@ -75,4 +75,4 @@ set :deploy_user, :mayank
 set :keep_releases, 1
 
 append :linked_files, 'config/config.json'
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/sockets', 'vendor/bundle', '.bundle', 'public'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/sockets', 'vendor/bundle', 'bundle', 'public'

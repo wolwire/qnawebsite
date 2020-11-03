@@ -69,3 +69,6 @@ gem 'bootstrap-will_paginate',    '1.0.0'
 gem 'bootstrap-sass',             '3.4.1'
 gem 'jquery-rails',               '4.3.5'
 gem "nokogiri",                   '1.10.10'
+gem "ed25519"
+gem "bcrypt_pbkdf"
+

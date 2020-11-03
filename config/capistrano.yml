@@ -1,15 +1,13 @@
 ---
-app_name: stack_over_flow
-repository: git@github.com:wolwire/stack_over_flow.git
+app_name: qnawebsite
+repository: git@github.com:wolwire/qnawebsite.git
 branch: master
 paths:
-  server: ~/
-  local: ~/stack_over_flow
-  config: ~/stack_over_flow/config/
+  server: /home/pi
+  local: /Users/mayank/qnawebsite
+  config: /Users/mayank/qnawebsite/config
 roles:
   app:
-    - a.b.c.d
-  job:
-    - a.b.c.d
+    - 192.168.0.107
 default_env:
-  RAILS_MASTER_KEY: 7ef6c65004913ef4eddcb47a4a4621be
+  RAILS_MASTER_KEY: 7ef6c65004913ef4eddcb47a4a4621be%
