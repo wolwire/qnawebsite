@@ -18,4 +18,3 @@ install_plugin Capistrano::BundleRsync::Plugin
 require_relative 'lib/capistrano/recipies/base'
 require_relative 'lib/capistrano/recipies/config'
 require_relative 'lib/capistrano/recipies/puma'
-require_relative 'lib/capistrano/recipies/app'
