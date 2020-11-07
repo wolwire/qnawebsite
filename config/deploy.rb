@@ -60,6 +60,8 @@ set :branch, (CAP_CONFIG['branch'] || 'master ')
 set :user, :pi
 # set :deploy_user, :ubuntu
 set :use_sudo, true
+set :user, :ubuntu
+set :deploy_user, :ubuntu
 set :deploy_to, "#{CAP_CONFIG['paths']['server']}/#{fetch(:application)}"
 set :local_path, "#{CAP_CONFIG['paths']['local']}"
 set :bundle_path, -> { shared_path.join('bundle') }
@@ -70,8 +72,6 @@ set :old_release, ENV['old_release']
 set :bundle_rsync_rsync_options, '-az --delete --exclude=.local_repo'
 set :assets_roles, [:app]
 set :default_env, CAP_CONFIG['default_env']
-set :user, :mayank
-set :deploy_user, :mayank
 set :keep_releases, 1
 
 append :linked_files, 'config/config.json'
