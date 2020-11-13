@@ -42,9 +42,10 @@ namespace :puma do
   task :stop do
     on roles(:app) do
       within current_path do
-        pid = get_puma_pid
-        execute :kill, '-s', 'SIGTERM', pid if pid
-
+        if puma_running?
+          pid = get_puma_pid
+          execute :kill, '-s', 'SIGTERM', pid
+        end
         execute :rm, fetch(:puma_pid_file) if test("[ -f #{fetch(:puma_pid_file)} ]")
         execute :rm, fetch(:puma_sock_file) if test("[ -f #{fetch(:puma_sock_file)} ]")
       end
@@ -61,7 +62,7 @@ namespace :puma do
 
           sleep(5)
           if puma_running?
-            puts 'Puma is running'
+            puts 'Restart Successful'
             break
           end
 
