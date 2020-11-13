@@ -61,7 +61,7 @@ namespace :puma do
 
           sleep(5)
           if puma_running?
-            # Restart successfull
+            puts 'Puma is running'
             break
           end
 
