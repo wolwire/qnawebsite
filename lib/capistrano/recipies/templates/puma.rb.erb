@@ -5,6 +5,7 @@ JSON.parse(File.read(env_file)).each do |key, value|
   ENV[key.to_s] = value
 end if File.exists?(env_file)
 
+app_dir = File.expand_path("../..", __FILE__)
 rails_env = ENV.fetch("RAILS_ENV") { 'development' }
 DEV_ENV = (rails_env === 'development')
 
