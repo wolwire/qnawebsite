@@ -6,9 +6,7 @@ JSON.parse(File.read(env_file)).each do |key, value|
 end if File.exists?(env_file)
 
 app_dir = File.expand_path("../..", __FILE__)
-rails_env = ENV.fetch("RAILS_ENV") { 'development' }
-DEV_ENV = (rails_env === 'development')
-
+rails_env = '<%= fetch(:stage) %>'
 # Puma can serve each request in a thread from an internal thread pool.
 # The `threads` method setting takes two numbers: a minimum and maximum.
 # Any libraries that use thread pools should be configured to match
@@ -25,7 +23,7 @@ port         ENV["PUMA_PORT"].to_i
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment rails_env
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
